@@ -2,9 +2,11 @@ package es.pildoras.prubaannotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("ComercialExperimentado")//Registra esta clase en el contenedor del Bean
+@Scope("prototype")//Indicamos que vamos a trabajar con el patron Prototype
 public class ComercialExperimentado implements Empleados{
 
 	@Autowired//Aplica el concepto de Reflexion  para aplicar un control de dependencia
