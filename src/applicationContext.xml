@@ -11,6 +11,4 @@
 
 	<context:component-scan base-package="es.pildoras.prubaannotations"></context:component-scan>
 	
-	
-	
 </beans>
