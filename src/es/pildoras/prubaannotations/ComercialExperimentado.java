@@ -6,18 +6,31 @@ import org.springframework.stereotype.Component;
 @Component("ComercialExperimentado")//Registra esta clase en el contenedor del Bean
 public class ComercialExperimentado implements Empleados{
 
+	@Autowired//Aplica el concepto de Reflexion  para aplicar un control de dependencia
 	private CreacionInformeFinanciero nuevoInforme;
 	
-	@Autowired//Busca alguna clase que implemente "CreacionInformeFinanciero" y cuando la encuentra realiza la inyeccion
-	public ComercialExperimentado(CreacionInformeFinanciero nuevoInforme) {
-		this.nuevoInforme = nuevoInforme;
-	}
+//	@Autowired//Busca alguna clase que implemente "CreacionInformeFinanciero" y cuando la encuentra realiza la inyeccion
+//	public ComercialExperimentado(CreacionInformeFinanciero nuevoInforme) {
+//		this.nuevoInforme = nuevoInforme;
+//	}
 	
+//	@Autowired
+//	public void setNuevoInforme(CreacionInformeFinanciero nuevoInforme) {
+//		this.nuevoInforme = nuevoInforme;
+//	}
+	
+//	@Autowired//Realiza la ineccion en un metodo cualquiera
+//	public void creacionInforme(CreacionInformeFinanciero nuevoInforme) {
+//		this.nuevoInforme = nuevoInforme;
+//	}
+
 	@Override
 	public String getTareas() {
 	
 		return "Vender, vender y vender mas!";
 	}
+
+
 
 	@Override
 	public String getInforme() {
