@@ -1,12 +1,14 @@
 package es.pildoras.prubaannotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("ComercialExperimentado")//Registra esta clase en el contenedor del Bean
 public class ComercialExperimentado implements Empleados{
 
 	@Autowired//Aplica el concepto de Reflexion  para aplicar un control de dependencia
+	@Qualifier("InformeFinancieroTrim4")//Como tengo varias clases que impelmentan "CreacionInformeFinanciero" debo decirle cual quiero que implemente
 	private CreacionInformeFinanciero nuevoInforme;
 	
 //	@Autowired//Busca alguna clase que implemente "CreacionInformeFinanciero" y cuando la encuentra realiza la inyeccion
